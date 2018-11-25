@@ -26,8 +26,9 @@ try:
             # 打印结果
             print("fname=%s,lname=%s,age=%s,sex=%s,income=%s" % \
                   (dept_id, parent_id, name, order_num, del_flg))
-    except:
-        print("Error: unable to fetch data")
+    except Exception as e:
+        print("SQL语句异常...")
+        print(e)
 
     # 关闭数据库连接
     db.close()
